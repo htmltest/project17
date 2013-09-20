@@ -1,0 +1,14 @@
+#top ul {display:inline!ie; zoom:1!ie}
+
+.photoreports-title h2,
+.tv-title h2,
+.artists-title h2,
+.partners-title h2,
+.container-title h2,
+.content-title h2 {display:inline!ie; zoom:1!ie}
+
+.photoreports-anonce-wrap {display:block}
+.photoreports-anonce-inner {display:block}
+
+.blockquote-author-photo {display:inline; zoom:1}
+.blockquote-text {display:inline; zoom:1}

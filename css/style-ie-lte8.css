@@ -1,0 +1,84 @@
+.header-social a span {display:none}
+.header-social a:hover span {display:block}
+
+.slider-ctrl ul li.active .slider-ctrl-date {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9f84c88,endColorstr=#d9f84c88); zoom:1}
+.slider-prev span,
+.slider-next span {display:none}
+.slider-prev:hover span,
+.slider-next:hover span {display:block}
+
+.photoreports-date {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9f24380,endColorstr=#d9f24380); zoom:1}
+.photoreports-list a:hover .photoreports-date {filter:none}
+.photoreports-date-month:after{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50)}
+.photoreports-bg {display:none}
+.photoreports-list a:hover .photoreports-bg {display:block; background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d99a4ca5,endColorstr=#d99a4ca5); zoom:1}
+.photoreports-anonce {display:none}
+.photoreports-list a:hover .photoreports-anonce {display:block}
+
+.tv-list-photo sub {display:none}
+.tv-list a:hover .tv-list-photo sub {display:block}
+.tv-list-photo sup {display:none}
+.tv-list a:hover .tv-list-photo sup {display:block}
+
+.tv-list-photo sub {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d99a4ca5,endColorstr=#d99a4ca5); zoom:1}
+.tv-list-date {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6f24380,endColorstr=#e6f24380); zoom:1}
+.tv-list a:hover .tv-list-date {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e69a4ca5,endColorstr=#e69a4ca5)}
+
+.citation-text-content sub,
+.citation-text-content sup {behavior:url(./js/PIE.htc)}
+
+.artists-list-photo,
+.artists-group-photo-color {behavior:url(./js/PIE.htc)}
+.artists-group-photo-color {display:block; top:-999px}
+.artists-group-list a:hover .artists-group-photo-color {top:0}
+
+.footer-social a span {display:none}
+.footer-social a:hover span {display:block}
+
+.window {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9ffffff,endColorstr=#d9ffffff); zoom:1}
+.window-close span {display:none}
+.window-close:hover span {display:block}
+
+.window-container {behavior:url(./js/PIE.htc)}
+
+.callback-input input,
+.callback-input textarea,
+.callback-input label,
+.callback-btn input {behavior:url(./js/PIE.htc)}
+
+.middle ul li:after {behavior:url(./js/PIE.htc)}
+
+.blockquote-author-photo {behavior:url(./js/PIE.htc)}
+
+.content-slider ul li {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)}
+.content-slider ul li:first-child {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100)}
+
+.content-slider-prev span,
+.content-slider-next span {display:none}
+.content-slider-prev:hover span,
+.content-slider-next:hover span {display:block}
+
+.content-slider-preview a span {display:none; background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#999a4ca5,endColorstr=#999a4ca5); zoom:1}
+.content-slider-preview a.active span {display:block}
+
+.artists-letters a {behavior:url(./js/PIE.htc)}
+.artists-group-title div span {behavior:url(./js/PIE.htc)}
+.artists-group-photo {behavior:url(./js/PIE.htc)}
+
+.artist-order-link a {behavior:url(./js/PIE.htc)}
+
+.callback-select-inner {behavior:url(./js/PIE.htc)}
+.callback-select-close span {display:none}
+.callback-select-close:hover span {display:block}
+
+.photoreports-menu ul li a strong {behavior:url(./js/PIE.htc)}
+
+.pager a {behavior:url(./js/PIE.htc)}
+
+.photoalbum-list a sup {display:none; background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#d99a4ca5,endColorstr=#d99a4ca5); zoom:1}
+.photoalbum-list a:hover sup {display:block}
+.photoalbum-list a sub {display:none}
+.photoalbum-list a:hover sub {display:block}
+
+.event-date {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6f24380,endColorstr=#e6f24380); zoom:1}
+.events-archive .event-date {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e69a4ca5,endColorstr=#e69a4ca5)}

@@ -1,0 +1,575 @@
+@font-face {font-family:"Arial Rounded MT Pro"; src:url("../fonts/arialroundedmtprocyr-webfont.eot"); src:url("../fonts/arialroundedmtprocyr-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arialroundedmtprocyr-webfont.woff") format("woff"), url("../fonts/arialroundedmtprocyr-webfont.ttf") format("truetype"), url("../fonts/arialroundedmtprocyr-webfont.svg#arial_rounded_mt_pro_cyrRg") format("svg"); font-weight:normal; font-style:normal}
+@font-face {font-family:"Arial Rounded MT Pro"; src:url("../fonts/arialroundedmtprocyr-bold-webfont.eot"); src:url("../fonts/arialroundedmtprocyr-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arialroundedmtprocyr-bold-webfont.woff") format("woff"), url("../fonts/arialroundedmtprocyr-bold-webfont.ttf") format("truetype"), url("../fonts/arialroundedmtprocyr-bold-webfont.svg#arial_rounded_mt_pro_cyrbold") format("svg"); font-weight:bold; font-style:normal}
+
+html {min-width:1000px}
+
+body {min-width:1000px; margin:0; padding:0; font:15px/20px arial, helvetica, sans-serif; color:#404040; background:#fff}
+
+a {color:#f24380; outline:none}
+a:hover {color:#df0a6e; text-decoration:none}
+
+img {border:none}
+
+h2 {font:bold 34px/36px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0}
+h2.pink {color:#f24380}
+h3 {font:bold 26px/28px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:34px 0 11px 0; padding:0}
+h3.pink {color:#f24380}
+h4 {font:bold 24px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:34px 0 11px 0; padding:0}
+h4.pink {color:#f24380}
+h5 {font:bold 20px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:34px 0 10px 0; padding:0}
+h5.pink {color:#f24380}
+p {margin:0 0 8px 0; padding:0}
+ul {margin:0 0 26px 0; padding:0; list-style:none}
+ul li {margin:0 0 8px 0; padding:0 0 0 20px; position:relative}
+ul li:after {content:""; display:block; width:6px; height:6px; position:absolute; left:0; top:8px; background:#f24380; -moz-border-radius:3px; -webkit-border-radius:3px; -khtml-border-radius:3px; border-radius:3px}
+ol {margin:0 0 26px 0; padding:0; list-style:none; counter-reset:point}
+ol li {margin:0 0 8px 0; padding:0 0 0 20px; position:relative}
+ol li:after {content:counter(point)'.'; counter-increment:point 1; display:block; position:absolute; left:0; top:0; color:#f24380; font:bold 18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif}
+blockquote {position:relative; padding:0 55px; margin:53px 0 0 0; font:bold 18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#404040; text-align:center}
+blockquote:before {content:""; display:block; width:25px; height:28px; position:absolute; left:0; top:50%; margin-top:-14px; background:url(../images/sprite.png) -169px -70px}
+blockquote:after {content:""; display:block; width:25px; height:28px; position:absolute; right:0; top:50%; margin-top:-14px; background:url(../images/sprite.png) -194px -70px}
+table {border-collapse:collapse; border:none; margin:10px 0 20px 0}
+table td {vertical-align:top; padding:2px 15px 2px 0; border:none}
+table td.td-name {padding:3px 15px 3px 0; width:100px; font:bold 13px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#919191}
+
+.wrapper {position:relative; min-width:1000px; width:100%; overflow:hidden}
+
+#top {height:54px; position:relative; text-align:center; font:bold 14px/54px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#f24380; text-transform:uppercase}
+#top ul {margin:0; padding:0; list-style:none; display:inline-block; position:relative}
+#top ul li {float:left; margin:0; padding:0 13px}
+#top ul li:after {display:none}
+#top ul li a {color:#3d3d3d}
+#top ul li a:hover {color:#f24380; text-decoration:none}
+
+header {position:relative; z-index:10; background:url(../images/shadow-down.png) no-repeat center top}
+.header-wrap {position:relative; background:url(../images/shadow-up.png) no-repeat center bottom}
+.header-inner {position:relative; height:215px; width:980px; margin:0 auto}
+.header-title {position:absolute; left:-10px; top:54px; width:340px; text-align:right; font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#3d3d3d; text-transform:uppercase}
+.header-title h1 {font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; margin:0; padding:0 0 10px 0}
+.header-title p {margin:0; padding:0 0 6px 0}
+.header-title div {font:13px/16px arial, helvetica, sans-serif; color:#919191; text-transform:none}
+
+.logo {position:absolute; left:326px; top:26px; line-height:0}
+
+.header-contacts {position:absolute; left:650px; top:54px; width:330px}
+.header-contacts-col {float:right; width:140px}
+.header-contacts-col:first-child {float:left; width:190px}
+.header-phone {font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#3d3d3d}
+.header-order {padding:11px 0 0 0}
+.header-order a {display:block; width:169px; height:37px; font:bold 14px/39px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#fff; text-decoration:none; background:url(../images/sprite.png); text-align:center}
+.header-order a:hover {background-position:left -37px}
+.header-order a:active {background-position:left -74px}
+.header-social {width:100%; padding:14px 0 0 0}
+.header-social:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.header-social a {float:left; width:29px; height:28px; background:url(../images/sprite.png); margin:0 5px 0 0; position:relative; cursor:pointer}
+.header-social a span {display:block; position:absolute; left:0; top:0; width:29px; height:28px; background:url(../images/sprite.png); opacity:0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.header-social a:hover span {opacity:1}
+.header-social a.header-social-vk {background-position:-169px top}
+.header-social a.header-social-vk span {background-position:-169px -28px}
+.header-social a.header-social-facebook {background-position:-198px top}
+.header-social a.header-social-facebook span {background-position:-198px -28px}
+.header-social a.header-social-twitter {background-position:-227px top}
+.header-social a.header-social-twitter span {background-position:-227px -28px}
+.header-social a.header-social-instagram {background-position:-256px top}
+.header-social a.header-social-instagram  span {background-position:-256px -28px}
+.header-callback {font:bold 13px/16px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; padding:3px 0 0 0}
+.header-callback a {color:#b74990; text-decoration:none; background:url(../images/header-callback.png) repeat-x left bottom}
+.header-callback a:hover {color:#f24380; background:url(../images/header-callback-hover.png) repeat-x left bottom}
+.header-email {font:bold 10px/12px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; padding:26px 0 0 0}
+.header-email a {color:#f24380}
+.header-email a:hover {color:#b74990}
+
+#slider {position:relative; margin:0 -100px}
+.slider-wrap {width:1180px; margin:0 auto; position:relative}
+.slider-container {position:relative}
+.slider-content {width:100%; height:403px; position:relative; overflow:hidden}
+.slider-content ul {margin:0; padding:0; list-style:none; position:relative; width:100%; height:403px}
+.slider-content ul li {display:none; position:absolute; left:0; top:0; margin:0; padding:0; width:1180px; height:403px; overflow:hidden}
+.slider-content ul li:first-child {display:block}
+.slider-content ul li:after {display:none}
+.slider-prev,
+.slider-next {position:absolute; z-index:3; top:182px; display:block; width:70px; height:70px; background:url(../images/sprite.png); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-prev span,
+.slider-next span {display:block; opacity:0; position:absolute; left:0; top:0; width:70px; height:70px; background:url(../images/sprite.png); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-prev:hover span,
+.slider-next:hover span {opacity:1}
+.slider-prev {left:100px; background-position:left -111px}
+.slider-prev span {background-position:left -181px}
+.slider-next {right:100px; background-position:-70px -111px}
+.slider-next span {background-position:-70px -181px}
+.slider-ctrl {background:url(../images/shadow-down-2.png) no-repeat center top; position:relative; z-index:3}
+.slider-ctrl ul {margin:0 auto; padding:0; list-style:none; width:978px}
+.slider-ctrl ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.slider-ctrl ul li {float:left; width:326px; margin:0; padding:0; height:178px; position:relative}
+.slider-ctrl ul li:after {display:none}
+.slider-ctrl ul li a {display:block; position:relative; cursor:pointer; width:326px; height:178px; text-decoration:none}
+.slider-ctrl-date {float:left; width:110px; margin-top:-20px; height:198px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-ctrl ul li.active .slider-ctrl-date {background:rgba(248, 76, 136, .85)}
+.slider-ctrl-date-day {display:block; text-align:center; font:55px/55px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#f24380; padding:66px 0 0 0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-ctrl ul li.active .slider-ctrl-date-day {color:#fff}
+.slider-ctrl-date-month {display:block; text-align:center; font:14px/14px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#767676; text-transform:uppercase; position:relative; padding:16px 0 0 0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-ctrl ul li.active .slider-ctrl-date-month {color:#fff}
+.slider-ctrl-date-month:after {content:""; display:block; width:20px; height:2px; background:#ccc; position:absolute; left:50%; margin-left:-10px; top:3px}
+.slider-ctrl ul li.active .slider-ctrl-date-month:after {background:#fcb3cd; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-ctrl-text {float:left; width:180px; padding:0 0 0 17px}
+.slider-ctrl-name {display:block; font:15px/17px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#767676; text-transform:uppercase; padding:50px 0 6px 0}
+.slider-ctrl-anonce {display:block; font:bold 17px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#252525; text-decoration:none; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.slider-ctrl ul li.active .slider-ctrl-anonce {color:#f24380}
+
+#photoreports {background:url(../images/shadow-down.png) no-repeat center top}
+.photoreports-wrap {background:url(../images/shadow-up.png) no-repeat center bottom}
+.photoreports-container {width:978px; margin:0 auto; background:url(../images/shadow-down-3.png) no-repeat center bottom; padding:67px 0 60px 0}
+.photoreports-title {background:url(../images/line-1.png) repeat-x left center; position:relative; text-align:center}
+.photoreports-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 24px; background:#fff; display:inline-block; position:relative}
+.photoreports-title-link {position:absolute; right:0; top:10px; background:#fff; padding:0 0 0 20px; font:bold 20px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif}
+.photoreports-title-link a {color:#f24380}
+.photoreports-title-link a:hover {color:#be6bb4}
+.photoreports-list {width:100%; height:275px; position:relative; padding:43px 0 0 0}
+.photoreports-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.photoreports-list a {float:left; width:326px; height:275px; cursor:pointer; position:relative; text-decoration:none; color:#fff}
+.photoreports-bg {display:block; opacity:0; width:326px; height:275px; position:absolute; left:0; top:0; background:rgba(154, 76, 165, .85); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoreports-list a:hover .photoreports-bg {opacity:1}
+.photoreports-date {display:block; width:110px; height:110px; position:absolute; left:0; top:83px; background:rgba(242, 67, 128, .85); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoreports-list a:hover .photoreports-date {background:none}
+.photoreports-date-day {display:block; text-align:center; font:40px/40px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:24px 0 0 0}
+.photoreports-date-month {display:block; text-align:center; font:12px/12px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; position:relative; padding:12px 0 0 0}
+.photoreports-date-month:after {content:""; display:block; width:20px; height:2px; background:#fff; position:absolute; left:50%; margin-left:-10px; top:2px; opacity:.5}
+.photoreports-anonce {display:block; opacity:0; position:absolute; left:110px; top:0; width:200px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoreports-list a:hover .photoreports-anonce {opacity:1}
+.photoreports-anonce-wrap {display:table}
+.photoreports-anonce-inner {display:table-cell; width:100%; height:275px; vertical-align:middle; text-align:left; position:relative}
+.photoreports-anonce-text {display:block; font:20px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:0 0 10px 0}
+.photoreports-anonce-place {font-size:13px; text-transform:uppercase; padding:0 0 0 19px; position:relative}
+.photoreports-anonce-place:after {content:""; display:block; position:absolute; left:0; top:0; width:10px; height:15px; background:url(../images/sprite.png) -169px -56px}
+
+#tv {width:980px; margin:0 auto; padding:57px 0 68px 0}
+.tv-title {background:url(../images/line-2.png) repeat-x left 16px; position:relative; text-align:center}
+.tv-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 108px 0 24px; background:#fff; display:inline-block; position:relative}
+.tv-title h2:after {content:""; display:block; width:66px; height:65px; background:url(../images/sprite.png) -140px -111px; position:absolute; right:32px; top:50%; margin-top:-33px}
+.tv-title-link {position:absolute; right:0; top:10px; background:#fff; padding:0 0 0 20px; font:bold 20px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif}
+.tv-title-link a {color:#f24380}
+.tv-title-link a:hover {color:#be6bb4}
+.tv-list {width:100%; padding:46px 0 0 0}
+.tv-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tv-list a {float:left; width:245px; position:relative; cursor:pointer; text-decoration:none}
+.tv-list-photo {display:block; line-height:0; position:relative; width:100%; height:178px; overflow:hidden}
+.tv-list-photo sub {display:block; opacity:0; position:absolute; left:0; top:0; width:245px; height:178px; background:rgba(154, 76, 165, .85); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.tv-list a:hover .tv-list-photo sub {opacity:1}
+.tv-list-photo sup {display:block; opacity:0; position:absolute; left:100px; top:66px; width:55px; height:55px; background:url(../images/sprite.png) -140px -176px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.tv-list a:hover .tv-list-photo sup {opacity:1}
+.tv-list-descr {display:block; background:url(../images/tv-shadow.png) no-repeat center 35px; padding:0 10px 0 10px; position:relative}
+.tv-list-date {display:block; position:relative; margin-top:-35px; width:70px; height:70px; background:rgba(242, 67, 128, .90); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.tv-list a:hover .tv-list-date {background:rgba(154, 76, 165, .90)}
+.tv-list-date-day {display:block; text-align:center; font:26px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:14px 0 0 0; color:#fff}
+.tv-list-date-month {display:block; text-align:center; font:9px/9px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; position:relative; padding:10px 0 0 0; color:#fff}
+.tv-list-date-month:after {content:""; display:block; width:20px; height:2px; background:#fff; position:absolute; left:50%; margin-left:-10px; top:2px}
+.tv-list-name {display:block; font:18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; padding:11px 0 17px 0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.tv-list a:hover .tv-list-name {color:#fd226d}
+.tv-list-place {display:block; font-size:12px; line-height:14px; color:#2e2e2e; position:relative; padding:0 0 0 20px; text-transform:uppercase}
+.tv-list-place:after {content:""; display:block; position:absolute; left:0; top:0; width:10px; height:15px; background:url(../images/sprite.png) -179px -56px}
+
+#citation {position:relative; margin:0 -100px; background:url(../images/shadow-down-4.png) no-repeat center bottom; padding:0 0 62px 0}
+.citation-inner {width:1180px; margin:0 auto; height:310px; position:relative; background:url(../images/citation-bg.jpg) center; background-size:100%}
+.citation-text {position:absolute; left:0; top:0; width:100%; height:310px; display:table}
+.citation-text-inner {display:table-cell; height:310px; vertical-align:middle}
+.citation-text-content {text-align:center; color:#fff; font:bold 36px/44px "Arial Rounded MT Pro", arial, helvetica, sans-serif; width:500px; position:relative; margin:0 auto}
+.citation-text-content sub{display:block; position:absolute; left:50%; top:-37px; width:10px; height:10px; background:#fff; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px}
+.citation-text-content sup {display:block; position:absolute; left:50%; bottom:-42px; width:10px; height:10px; background:#fff; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px}
+
+#artists {position:relative; background:url(../images/shadow-up.png) no-repeat center bottom; margin:0 -77px; padding:51px 0 69px 0}
+.artists-inner {width:1134px; margin:0 auto; background:url(../images/line-1.png) repeat-x; position:relative}
+.artists-title {position:absolute; text-align:center; left:0; top:-16px; width:100%}
+.artists-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 33px; background:#fff; display:inline-block; position:relative}
+.artists-wrap {background:url(../images/line-1.png) repeat-y}
+.artists-container {background:url(../images/line-1.png) repeat-y right top}
+.artists-content {background:url(../images/line-1.png) repeat-x left bottom; position:relative; padding:57px 0 0 0}
+.artists-text {position:relative; margin:0 auto; font:bold 18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#404040; text-align:center; width:650px}
+.artists-text:before {content:""; display:block; width:25px; height:28px; position:absolute; left:-55px; top:50%; margin-top:-14px; background:url(../images/sprite.png) -169px -70px}
+.artists-text:after {content:""; display:block; width:25px; height:28px; position:absolute; right:-55px; top:50%; margin-top:-14px; background:url(../images/sprite.png) -194px -70px}
+.artists-list {position:relative; text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:54px 0 50px 0}
+.artists-list a {display:inline-block; vertical-align:top; width:138px; margin:0 15px; vertical-align:top; position:relative; cursor:pointer; text-decoration:none; color:#222; font:18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; letter-spacing:0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.artists-list a:hover {color:#ef0f59}
+.artists-list-photo {display:block; position:relative; width:138px; height:138px; -moz-border-radius:69px; -webkit-border-radius:69px; -khtml-border-radius:69px; border-radius:69px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.artists-list a:hover .artists-list-photo {-moz-border-radius:18px 69px 69px 69px; -webkit-border-radius:18px 69px 69px 69px; -khtml-border-radius:18px 69px 69px 69px; border-radius:18px 69px 69px 69px}
+.artists-list-name {display:block; padding:11px 0}
+.artists-all {position:absolute; left:50%; bottom:-20px; width:120px; padding:0 10px; margin-left:-70px; text-align:center; font:bold 20px/25px "Arial Rounded MT Pro", arial, helvetica, sans-serif}
+.artists-all span {display:block; position:absolute; left:0; top:24px; width:100%; height:6px; background:#fff}
+.artists-all a {position:relative; color:#f2568c}
+.artists-all a:hover {color:#be6bb4}
+
+#partners {width:980px; margin:0 auto; padding:47px 0 97px 0}
+.partners-title {background:url(../images/line-3.png) repeat-x left center; text-align:center; margin-bottom:49px}
+.partners-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 45px; background:#fff; display:inline-block; position:relative}
+.partners-text {position:relative; margin:0 auto; font:bold 18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#404040; text-align:center; width:650px}
+.middle .partners-text {margin:25px auto 6px auto}
+.partners-text:before {content:""; display:block; width:25px; height:28px; position:absolute; left:-55px; top:50%; margin-top:-14px; background:url(../images/sprite.png) -169px -70px}
+.partners-text:after {content:""; display:block; width:25px; height:28px; position:absolute; right:-55px; top:50%; margin-top:-14px; background:url(../images/sprite.png) -194px -70px}
+.partners-list {width:100%; position:relative; font-size:0; line-height:0; letter-spacing:-5px; text-align:center; padding:30px 0 0 0}
+.partners-list a {display:inline-block; vertical-align:top; width:163px; text-decoration:none; color:#767676; font:11px/15px "Arial Rounded MT Pro", arial, helvetica, sans-serif; cursor:pointer; position:relative; letter-spacing:0; text-transform:uppercase; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.middle .partners-list a {margin-bottom:20px}
+.partners-list a:hover {text-decoration:underline; color:#f24380}
+.partners-list-photo {text-align:center; display:block; height:130px; line-height:130px; position:relative; overflow:hidden}
+.partners-list-photo img {vertical-align:middle}
+.partners-list-name {display:block; padding:0 15px}
+
+#main-social {position:relative; margin:0 -81px; background:url(../images/shadow-up.png) no-repeat center bottom; padding:0 0 80px 0}
+.main-social-inner {background:url(../images/line-2.png) repeat-x -5px top; width:1142px; margin:0 auto}
+.main-social-wrap {background:url(../images/line-2.png) repeat-x -5px bottom; padding:6px 0}
+.main-social-container {background:url(../images/line-4.png) repeat-y left top}
+.main-social-content {background:url(../images/line-4.png) repeat-y right -5px; padding:36px 91px 38px 91px}
+
+.container {width:980px; margin:0 auto; padding:76px 0 0 0}
+
+.container-title {background:url(../images/line-2.png) repeat-x left center; text-align:center}
+.container-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 20px; background:#fff; display:inline-block; position:relative}
+
+.content {background:url(../images/shadow-up.png) no-repeat center bottom; padding:0 0 50px 0}
+.content-inner {width:980px; margin:0 auto; padding:76px 0 0 0}
+
+.content-title {background:url(../images/line-1.png) repeat-x left center; text-align:center}
+.content-title h2 {font:bold 34px/34px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:0 20px; background:#fff; display:inline-block; position:relative}
+
+.middle {width:100%}
+.middle:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.blockquote-author {text-align:center; width:100%; position:relative; padding:14px 0 0 0; margin:0 0 37px 0}
+.blockquote-author-photo {display:inline-block; vertical-align:top; width:52px; height:52px; position:relative; -moz-border-radius:26px; -webkit-border-radius:26px; -khtml-border-radius:26px; border-radius:26px}
+.blockquote-text {display:inline-block; vertical-align:top; text-align:left; padding:11px 0 0 7px}
+.blockquote-name {line-height:17px}
+.blockquote-post {font-size:12px; line-height:14px; color:#919191}
+
+.img-content {border:1px solid #e5e5e5; padding:20px; width:245px}
+.img-content-left {float:left; clear:left; margin:0 30px 10px 0}
+.img-content-right {float:right; clear:right; margin:0 0 10px 30px}
+.img-content-inner {line-height:0; position:relative}
+.img-content-inner img {max-width:100%; height:auto !important}
+.img-content-text {font:16px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:22px 0 0 0; color:#222; background:url(../images/img-content-shadow.png) no-repeat center top}
+
+.content-slider {width:100%; position:relative; overflow:hidden; line-height:0}
+.content-slider ul {margin:0; padding:0; width:100%; height:448px; list-style:none; position:relative}
+.content-slider ul li {opacity:0; width:100%; position:absolute; left:0; top:0; margin:0; padding:0; height:448px; overflow:hidden}
+.content-slider ul li img {display:block; position:absolute}
+.content-slider ul li:first-child {opacity:1; position:relative}
+.content-slider ul li:after {display:none}
+.content-slider-prev,
+.content-slider-next {position:absolute; z-index:3; top:50%; cursor:pointer; margin-top:-35px; display:block; width:70px; height:70px; background:url(../images/sprite.png); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.content-slider-prev span,
+.content-slider-next span {display:block; opacity:0; position:absolute; left:0; top:0; width:70px; height:70px; background:url(../images/sprite.png); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.content-slider-prev:hover span,
+.content-slider-next:hover span {opacity:1}
+.content-slider-prev {left:0; background-position:left -111px}
+.content-slider-prev span {background-position:left -181px}
+.content-slider-next {right:0; background-position:-70px -111px}
+.content-slider-next span {background-position:-70px -181px}
+.content-slider-ctrl {text-align:center; font:bold 16px/18px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; background:url(../images/content-slider-ctrl.png) no-repeat center top; padding:28px 0 34px 0; margin-bottom:-34px}
+.content-slider-ctrl em {font-style:normal}
+.content-slider-preview {line-height:0; width:100%}
+.content-slider-preview:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.content-slider-preview a {float:left; width:116px; height:84px; cursor:pointer; position:relative; overflow:hidden}
+.content-slider-preview a span {display:block; opacity:0; position:absolute; left:0; top:0; width:116px; height:84px; background:rgba(154, 76, 165, .6); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.content-slider-preview a.active span {opacity:1}
+
+aside {float:right; width:282px; padding:34px 0 0 0}
+
+.aside-banner {border:1px solid #e5e5e5; padding:20px; line-height:0}
+
+.aside-text {padding:3px 21px 0 21px}
+.aside-text h2 {margin:49px 0 0 0}
+.aside-text h3 {margin:30px 0 0 0}
+.aside-text h4 {margin:11px 0 0 0}
+.aside-text h5 {margin:13px 0 0 0}
+
+aside+article {float:left; width:660px}
+
+article {padding:32px 0 0 0}
+
+.artists-letters {float:right; position:relative; width:32px; margin-right:-66px; font:bold 13px/32px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; padding:16px 0 0 0}
+.artists-letters-inner {position:relative; width:32px}
+.artists-letters-fix {position:fixed; top:16px; left:0}
+.artists-letters a {display:block; position:relative; width:32px; height:32px; margin:0 0 8px 0; text-decoration:none; color:#fff; text-align:center; background:#d7d7d7; -moz-border-radius:16px; -webkit-border-radius:16px; -khtml-border-radius:16px; border-radius:16px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.artists-letters a:hover {background:#f24380}
+
+.artists-group {padding:0 0 10px 0}
+.artists-group-title {height:44px; position:relative; background:url(../images/line-5.png) repeat-x left center}
+.artists-group-title div {width:84px; margin:0 auto; height:44px; background:#fff; position:relative}
+.artists-group-title div span {display:block; width:44px; height:44px; margin:0 auto; text-align:center; font:bold 18px/44px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#fff; position:relative; background:#f24380; -moz-border-radius:22px; -webkit-border-radius:22px; -khtml-border-radius:22px; border-radius:22px}
+.artists-group-list {text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:20px 0 0 0}
+.artists-group-list a {display:inline-block; overflow:hidden; vertical-align:top; margin:0 0 16px 0; position:relative; width:140px; text-decoration:none; color:#222; font:16px/18px "Arial Rounded MT Pro", arial, helvetica, sans-serif; letter-spacing:0; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.artists-group-list a:hover {color:#f24380}
+.artists-group-photo {display:block; width:60px; height:60px; margin:0 auto; position:relative; -moz-border-radius:30px; -webkit-border-radius:30px; -khtml-border-radius:30px; border-radius:30px}
+.artists-group-photo-color {position:absolute; left:50%; margin-left:-30px; top:0; display:block; opacity:0; width:60px; height:60px; -moz-border-radius:30px; -webkit-border-radius:30px; -khtml-border-radius:30px; border-radius:30px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.artists-group-list a:hover .artists-group-photo-color {opacity:1}
+.artists-group-name {display:block; padding:8px 10px 0 10px}
+
+.artist-back-link {position:relative; z-index:2; width:330px; padding:21px 0 0 650px; margin:0 auto -45px auto; font-size:13px; color:#919191}
+.artist-back-link a {color:#919191}
+.artist-back-link a:hover {text-decoration:none; color:#919191}
+
+.artist {width:100%; padding:7px 0 0 0}
+.artist:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.artist-left {float:left; width:464px}
+
+.artist-photo {background:url(../images/artist-photos-shadow.png) no-repeat center bottom; padding:0 0 61px 0; margin-bottom:-60px}
+.artist-photo .content-slider ul {height:336px}
+.artist-photo .content-slider ul li {height:336px}
+
+.artist-player {position:relative; line-height:0}
+
+.artist-left .tv-list {width:478px; padding:0; font-size:0; line-height:0; letter-spacing:-5px; margin-bottom:-50px}
+.artist-left .tv-list a {float:none; display:inline-block; vertical-align:top; width:225px; margin:0 14px 50px 0; letter-spacing:0}
+.artist-left .tv-list-photo {height:164px}
+.artist-left .tv-list-photo sub {width:225px; height:164px}
+.artist-left .tv-list-photo sup {left:90px; top:59px}
+.artist-left .tv-list-descr {background-position:center 60px}
+.artist-left .tv-list-date {margin-top:-60px}
+.artist-left .tv-list-name {font-size:16px; line-height:18px; padding:17px 0 15px 0}
+.artist-left .tv-list-place {font-size:14px; line-height:16px}
+
+.artist-right {float:right; width:464px}
+
+.artist-social {height:42px; border-bottom:1px solid #e5e5e5; width:100%; margin-bottom:-5px}
+.artist-social:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.artist-social-item {float:left}
+.artist-social-item img,
+.artist-social-item iframe {vertical-align:top}
+.middle .artist-social-item table {margin:0}
+.middle .artist-social-item td {padding:0}
+
+.artist-text {position:relative}
+.artist-text h5 {margin-bottom:18px}
+
+.artist-order-link {position:absolute; right:0; top:-10px}
+.artist-order-link a {display:block; background:url(../images/btn.png); text-decoration:none; height:38px; cursor:pointer; padding:0 19px; text-transform:uppercase; color:#fff; font:bold 12px/42px "Arial Rounded MT Pro", arial, helvetica, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -webkit-box-shadow:-1px 1px 3px rgba(0, 0, 0, .44); -moz-box-shadow:-1px 1px 3px rgba(0, 0, 0, .44); box-shadow:-1px 1px 3px rgba(0, 0, 0, .44)}
+.artist-order-link a:hover {background-position:left -38px}
+.artist-order-link a:active {background-position:left -76px}
+
+.artist-sites {line-height:24px; position:relative}
+.artist-sites a:hover {text-decoration:none}
+
+.photoreports-menu {float:left; width:100px; padding:33px 0 0 0}
+.photoreports-menu ul {font:bold 18px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; margin:0; padding:0; list-style:none}
+.photoreports-menu ul li {margin:0; padding:0 0 12px 0; background:none}
+.photoreports-menu ul li:after {display:none}
+.photoreports-menu ul li a {text-decoration:none; color:#404040; position:relative}
+.photoreports-menu ul li.active a {color:#f24380}
+.photoreports-menu ul li a span {background:url(../images/photoreports-menu-link.png) repeat-x left bottom}
+.photoreports-menu ul li.active a span {background:url(../images/photoreports-menu-link-active.png) repeat-x left bottom}
+.photoreports-menu ul li a:hover span {background:none}
+.photoreports-menu ul li a strong {display:inline-block; width:20px; height:20px; margin:0 0 0 3px; position:relative; vertical-align:middle; background:#be6bb4; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px}
+.photoreports-menu ul li.active a strong,
+.photoreports-menu ul li.open a strong {background:#f24380}
+.photoreports-menu ul li a small {display:block; position:absolute; left:50%; top:8px; margin-left:-4px; width:0; height:0; border-top:5px solid #fff; border-left:4px solid transparent; border-right:4px solid transparent}
+.photoreports-menu ul li.active a small,
+.photoreports-menu ul li.open a small {border-top:none; border-bottom:5px solid #fff; top:7px}
+.photoreports-menu ul li ul {display:none; font:13px/16px arial, helvetica, sans-serif; padding:10px 0 7px 0}
+.photoreports-menu ul li.active ul {display:block}
+.photoreports-menu ul li ul li {padding:0 0 8px 0}
+.photoreports-menu ul li ul li a {text-decoration:none; color:#f24380; background:url(../images/photoreports-menu-link-active.png) repeat-x left bottom}
+.photoreports-menu ul li ul li a:hover {color:#df0a6e; background:none}
+.photoreports-menu ul li ul li.active a {color:#222; background:none}
+
+.photoreports-content {float:right; width:836px; margin-bottom:-28px}
+.photoreports-content .tv-list {width:885px; padding:35px 0 0 0; font-size:0; line-height:0; letter-spacing:-5px}
+.photoreports-content .tv-list a {margin:0 50px 50px 0; float:none; display:inline-block; vertical-align:top; letter-spacing:0}
+.photoreports-content .tv-list-photo sup {left:99px; top:71px; width:48px; height:37px; background-position:-206px -118px}
+.photoreports-content .tv-list-video .tv-list-photo sup {left:100px; top:66px; width:55px; height:55px; background-position:-140px -176px}
+.photoreports-content .tv-list-descr {background-position:center 60px}
+.photoreports-content .tv-list-date {margin-top:-60px}
+.photoreports-content .tv-list-name {font-size:16px; line-height:18px; padding:18px 0 17px 0}
+.photoreports-content .tv-list-place {font:14px/17px "Arial Rounded MT Pro", arial, helvetica, sans-serif; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoreports-content .tv-list a:hover .tv-list-place {color:#f24380}
+
+.pager {border-top:1px solid #e3e3e3; padding:18px 0; text-align:center; font-size:13px; line-height:36px}
+.pager a {display:inline-block; margin:0 7px; vertical-align:middle}
+.pager a:hover {text-decoration:none}
+.pager strong {font:bold 18px/36px "Arial Rounded MT Pro", arial, helvetica, sans-serif; display:inline-block; vertical-align:middle; color:#404040; margin:0 10px}
+.pager strong a {color:#404040; text-decoration:none; -moz-border-radius:18px; -webkit-border-radius:18px; -khtml-border-radius:18px; border-radius:18px}
+.pager strong a:hover {color:#f24380}
+.pager strong a.active {color:#f24380; background:#ededed; width:36px; margin:0}
+
+.photoalbum-top {width:100%; padding:34px 0 21px 0}
+.photoalbum-top:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.photoalbum-date {float:left; width:70px; height:70px; background:#f3558c; text-align:center; color:#fff}
+.photoalbum-date-day {font:26px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:14px 0 0 0}
+.photoalbum-date-month {text-transform:uppercase; font:9px/9px "Arial Rounded MT Pro", arial, helvetica, sans-serif; position:relative; padding:10px 0 0 0}
+.photoalbum-date-month:after {content:""; display:block; width:28px; height:2px; position:absolute; left:50%; top:2px; margin-left:-14px; background:#fff}
+.photoalbum-top-inner {margin-left:90px}
+.photoalbum-name {font:bold 24px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin-top:-4px; padding:0 0 6px 0}
+.photoalbum-place {font:14px/17px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#2e2e2e; position:relative; padding:0 0 0 20px; text-transform:uppercase}
+.photoalbum-place:after {content:""; display:block; position:absolute; left:0; top:0; width:10px; height:15px; background:url(../images/sprite.png) -179px -56px}
+.photoalbum-list {width:100%; line-height:0; padding:0 0 20px 0}
+.photoalbum-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.photoalbum-list a {float:left; width:209px; height:152px; position:relative; cursor:pointer; overflow:hidden}
+.photoalbum-list a sup {display:block; opacity:0; position:absolute; left:0; top:0; width:209px; height:152px; background:rgba(154, 76, 165, .85); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoalbum-list a:hover sup {opacity:1}
+.photoalbum-list a sub {display:block; opacity:0; position:absolute; left:82px; top:54px; width:45px; height:45px; background:url(../images/sprite.png) -206px -155px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.photoalbum-list a:hover sub {opacity:1}
+.photoreports-content .artist-social {height:41px; border-bottom:none; margin-bottom:0}
+
+.content-title-video {background:url(../images/line-2.png) repeat-x left center}
+.content-title-video h2 {padding:0 108px 0 24px}
+.content-title-video h2:after {content:""; display:block; width:66px; height:65px; background:url(../images/sprite.png) -140px -111px; position:absolute; right:32px; top:50%; margin-top:-33px}
+
+.content-title-partners {background:url(../images/line-3.png) repeat-x left center}
+
+.events-title {font:bold 26px/28px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; padding:0 0 14px 0}
+.events-list {margin-bottom:-16px}
+.events-list a {width:100%; display:block; position:relative; cursor:pointer; text-decoration:none; font:20px/24px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222}
+.events-list a:hover {color:#f24380}
+.events-list a:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.event-photo {float:left; width:180px; background:url(../images/event-photo-shadow.png) no-repeat center bottom; padding:0 0 47px 0; position:relative}
+.event-photo-inner {width:180px; height:130px; display:block; line-height:0; position:relative; overflow:hidden}
+.event-date {display:block; position:absolute; left:120px; top:10px; width:70px; height:70px; background:rgba(242, 67, 128, .9)}
+.event-date-day {display:block; text-align:center; font-size:26px; line-height:28px; padding:13px 0 0 0; color:#fff}
+.event-date-month {display:block; text-align:center; font-size:9px; line-height:9px; color:#fff; text-transform:uppercase; position:relative; padding:9px 0 0 0}
+.event-date-month:after {content:""; display:block; position:absolute; left:50%; top:1px; width:28px; height:2px; background:#fff; margin-left:-14px}
+.event-content {display:block; margin-left:210px; padding:10px 0 0 0}
+.event-place {display:block; padding:0 0 0 20px; font-size:14px; line-height:16px; color:#2e2e2e; position:relative; text-transform:uppercase}
+.event-place:after {content:""; display:block; position:absolute; left:0; top:0; width:10px; height:15px; background:url(../images/sprite.png) -179px -56px}
+.events-list a:hover .event-place {color:#f24380}
+.event-name {display:block; padding:9px 0 0 0}
+.events-archive {background:url(../images/line-2.png) repeat-x; padding:33px 0 0 0}
+.events-archive .events-list {margin-bottom:-27px}
+.events-archive .events-list a:hover {color:#ac42bb}
+.events-archive .event-date {background:rgba(154, 76, 165, .9)}
+.events-archive .event-place:after {background-position:-255px -56px}
+.events-archive .events-list a:hover .event-place {color:#ac42bb}
+
+.tv-list-photos .tv-list-photo sup {left:50%; top:50%; margin:-19px 0 0 -24px; width:48px; height:37px; background-position:-206px -118px}
+.event-social {border-bottom:1px solid #e5e5e5; margin-bottom:-5px}
+.event-social .artist-social {border-bottom:none; margin:0}
+.event-social-title {font:bold 16px/18px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; padding:4px 0 9px 0}
+.event-social-btn {width:100%; text-transform:uppercase; font:bold 12px/38px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:0 0 20px 0}
+.event-social-btn:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.event-social-btn a {text-decoration:none; color:#fff; float:left; margin:0 10px 0 0; padding:0 0 0 52px; height:37px; background:url(../images/sprite.png)}
+.event-social-btn a.event-social-vk {width:99px; background-position:-285px top}
+.event-social-btn a.event-social-vk:hover {background-position:-285px -37px}
+.event-social-btn a.event-social-vk:active {background-position:-285px -74px}
+.event-social-btn a.event-social-facebook {width:97px; background-position:-285px -111px}
+.event-social-btn a.event-social-facebook:hover {background-position:-285px -148px}
+.event-social-btn a.event-social-facebook:active {background-position:-285px -185px}
+
+.event-top {width:100%; margin-bottom:-9px; padding:8px 0 0 0}
+.event-top:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.event-top-date {float:left; width:70px; height:70px; background:#f24380; text-align:center; color:#fff}
+.event-top-date-day {font:26px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:14px 0 0 0}
+.event-top-date-month {text-transform:uppercase; font:9px/9px "Arial Rounded MT Pro", arial, helvetica, sans-serif; position:relative; padding:10px 0 0 0}
+.event-top-date-month:after {content:""; display:block; width:28px; height:2px; position:absolute; left:50%; top:2px; margin-left:-14px; background:#fff}
+.event-top-inner {margin-left:90px}
+.event-top-name {font:bold 24px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; padding:8px 0 9px 0}
+.event-top-info {width:100%}
+.event-top-info:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.event-top-place {float:left; font:14px/17px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#2e2e2e; position:relative; padding:0 22px 0 20px; text-transform:uppercase}
+.event-top-place:after {content:""; display:block; position:absolute; left:0; top:0; width:10px; height:15px; background:url(../images/sprite.png) -179px -56px}
+.event-top-time {float:left; font:14px/17px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#2e2e2e; position:relative; padding:0 0 0 20px; text-transform:uppercase}
+.event-top-time:after {content:""; display:block; position:absolute; left:0; top:0; width:15px; height:15px; background:url(../images/sprite.png) -270px -96px}
+
+.contacts-text {float:left; width:500px; padding:20px 0 0 0}
+.contacts-social {position:relative; padding:0 0 0 40px; line-height:28px; margin:10px 0 0 0}
+.contacts-social a {color:#404040}
+.contacts-social a:hover {color:#df0a6e}
+.contacts-social span {display:block; position:absolute; left:0; top:0; width:29px; height:28px; background:url(../images/sprite.png)}
+.contacts-social span.contacts-social-vk {background-position:-169px -28px}
+.contacts-social span.contacts-social-facebook {background-position:-198px -28px}
+.contacts-social span.contacts-social-twitter {background-position:-227px -28px}
+.contacts-social span.contacts-social-instagram {background-position:-256px -28px}
+
+.contacts-form {float:right; width:458px; border:2px solid #e5e5e5; margin-top:38px}
+.contacts-form-inner {padding:0 30px}
+.contacts-form-inner h2 {font:bold 26px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:28px 0 15px 0}
+
+footer {position:relative; height:378px; width:980px; margin:0 auto; background:url(../images/line-2.png) repeat-x center 248px}
+.footer-title {position:absolute; left:-10px; top:74px; width:340px; text-align:right; font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#3d3d3d; text-transform:uppercase}
+.footer-title-text {font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; padding:0 0 10px 0}
+.footer-title p {margin:0; padding:0 0 6px 0}
+.footer-title-descr {font:13px/16px arial, helvetica, sans-serif; color:#919191; text-transform:none}
+
+.logo-footer {position:absolute; left:406px; top:33px; line-height:0}
+
+.footer-contacts {position:absolute; left:650px; top:74px; width:330px}
+.footer-contacts-col {float:right; width:140px}
+.footer-contacts-col:first-child {float:left; width:190px}
+.footer-phone {font:bold 19px/22px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#3d3d3d}
+.footer-order {padding:11px 0 0 0}
+.footer-order a {display:block; width:169px; height:37px; font:bold 14px/39px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; color:#fff; text-decoration:none; background:url(../images/sprite.png); text-align:center}
+.footer-order a:hover {background-position:left -37px}
+.footer-order a:active {background-position:left -74px}
+.footer-social {width:170px; position:absolute; left:50%; margin-left:-85px; height:28px; top:236px; background:#fff; text-align:center; line-height:0; letter-spacing:-5px}
+.footer-social a {display:inline-block; width:29px; height:28px; background:url(../images/sprite.png); margin:0 2px 0 3px; position:relative}
+.footer-social a span {display:block; opacity:0; position:absolute; left:0; top:0; width:29px; height:28px; background:url(../images/sprite.png); -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.footer-social a:hover span {opacity:1}
+.footer-social a.footer-social-vk {background-position:-169px top}
+.footer-social a.footer-social-vk span {background-position:-169px -28px}
+.footer-social a.footer-social-facebook {background-position:-198px top}
+.footer-social a.footer-social-facebook span {background-position:-198px -28px}
+.footer-social a.footer-social-twitter {background-position:-227px top}
+.footer-social a.footer-social-twitter span {background-position:-227px -28px}
+.footer-social a.footer-social-instagram {background-position:-256px top}
+.footer-social a.footer-social-instagram span {background-position:-256px -28px}
+.footer-callback {font:bold 13px/16px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; padding:3px 0 0 0}
+.footer-callback a {color:#b74990; text-decoration:none; background:url(../images/header-callback.png) repeat-x left bottom}
+.footer-callback a:hover {color:#f24380; background:url(../images/header-callback-hover.png) repeat-x left bottom}
+.footer-email {font:bold 12px/14px "Arial Rounded MT Pro", arial, helvetica, sans-serif; text-transform:uppercase; padding:19px 0 0 0}
+.footer-email a {color:#f24380}
+.footer-email a:hover {color:#b74990}
+
+.copyrights {position:absolute; left:0; top:290px; width:100%; text-align:center; color:#a3a6a8; font-size:14px}
+.developer {position:absolute; left:0; top:322px; width:100%; text-align:center; color:#a3a6a8; font-size:14px}
+.developer a {color:#b74990}
+.developer a:hover {color:#df0a6e}
+.developer img {vertical-align:middle; margin:0 12px 0 14px}
+
+.window {position:absolute; left:0; top:0; width:100%; height:100%; z-index:888; overflow:auto; background:rgba(255, 255, 255, .85)}
+.window-overlay {position:absolute; left:0; top:0; width:100%; height:100%}
+.window-container {position:absolute; left:50%; top:50%; background:#fff; -webkit-box-shadow:0 0 79px rgba(0, 0, 0, .29); -moz-box-shadow:0 0 79px rgba(0, 0, 0, .29); box-shadow:0 0 79px rgba(0, 0, 0, .29)}
+.window-close {display:block; position:absolute; right:30px; z-index:889; top:26px; width:31px; height:31px; background:url(../images/sprite.png) -219px -56px}
+.window-close span {display:block; position:absolute; opacity:0; left:0; top:0; width:31px; height:31px; background:url(../images/sprite.png) -219px -87px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.window-close:hover span {opacity:1}
+
+.callback-window {display:none}
+.callback-window-wrap {width:462px; background:url(../images/window-border.png) repeat-x}
+.callback-window-inner {background:url(../images/window-border.png) repeat-x center bottom; padding:0 30px}
+.callback-window-inner h2 {font:bold 26px/26px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; margin:0; padding:28px 0 15px 0}
+.callback-form {position:relative}
+.callback-form form {margin:0; padding:0}
+.callback-label {font:13px/18px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#919191; padding:0 0 5px 0}
+.callback-label span {color:#f24380}
+.callback-input {position:relative; padding:0 0 17px 0}
+.callback-input input {position:relative; vertical-align:top; border:1px solid #d3d4d4; border-left-color:#e6e6e6; border-bottom-color:#e6e6e6; background:#f2f2f2; width:370px; height:18px; padding:9px 15px; margin:0; outline:none; color:#404040; font:15px/18px arial, helvetica, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53); -moz-box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53); box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53)}
+.callback-input input.error {border-color:#ff3f56}
+.callback-input textarea {position:relative; vertical-align:top; border:1px solid #d3d4d4; border-left-color:#e6e6e6; border-bottom-color:#e6e6e6; background:#f2f2f2; width:370px; height:177px; padding:9px 15px; margin:0; outline:none; color:#404040; font:15px/18px arial, helvetica, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53); -moz-box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53); box-shadow:inset -1px 1px 5px rgba(151, 155, 157, .53); overflow:auto; resize:none}
+.callback-input textarea.error {border-color:#ff3f56}
+.callback-input label {position:absolute; left:100%; top:0; margin-left:13px; display:block; height:38px; color:#fff; font:13px/38px "Arial Rounded MT Pro", arial, helvetica, sans-serif; white-space:nowrap; padding:0 25px; background:#ff3f56; -moz-border-radius:2px; -webkit-border-radius:2px; -khtml-border-radius:2px; border-radius:2px}
+.callback-input label:after {content:""; display:block; width:0; height:0; position:absolute; left:-7px; top:50%; margin-top:-7px; border-top:7px solid transparent; border-bottom:7px solid transparent; border-right:7px solid #ff3f56}
+.callback-ctrl {width:100%; padding:3px 0 28px 0}
+.callback-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.callback-select {z-index:2}
+.callback-select input {cursor:pointer; background:#f2f2f2 url(../images/callback-select-arrow.png) no-repeat 374px 16px}
+.callback-btn {float:left; position:relative}
+.callback-btn input {vertical-align:top; border:none; background:url(../images/btn.png); height:38px; overflow:visible; cursor:pointer; margin:0; padding:0 24px; text-transform:uppercase; color:#fff; font:bold 12px/42px "Arial Rounded MT Pro", arial, helvetica, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -webkit-box-shadow:-1px 1px 3px rgba(0, 0, 0, .44); -moz-box-shadow:-1px 1px 3px rgba(0, 0, 0, .44); box-shadow:-1px 1px 3px rgba(0, 0, 0, .44)}
+.callback-btn input:hover {background-position:left -38px}
+.callback-btn input:active {background-position:left -76px}
+.callback-required {float:right; font:13px/18px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#919191; padding:14px 0 0 0}
+.callback-required span {color:#f24380}
+
+.order-window {display:none}
+
+.order-artist-window {display:none}
+
+.callback-select-window {display:none; position:absolute; width:940px; left:50%; top:38px; margin-left:-470px; z-index:99}
+.callback-select-inner {position:relative; background:#fff; -webkit-box-shadow:0 0 20px rgba(0, 0, 0, .2); -moz-box-shadow:0 0 20px rgba(0, 0, 0, .2); box-shadow:0 0 20px rgba(0, 0, 0, .2)}
+.callback-select-inner h2 {font-size:20px; line-height:20px; padding:31px 0 0 30px; margin-bottom:-4px}
+.callback-select-close {display:block; position:absolute; right:20px; top:20px; width:31px; height:31px; background:url(../images/sprite.png) -219px -56px}
+.callback-select-close span {display:block; position:absolute; opacity:0; left:0; top:0; width:31px; height:31px; background:url(../images/sprite.png) -219px -87px; -webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease; transition:all .3s ease}
+.callback-select-close:hover span {opacity:1}
+.callback-select-list {width:100%; font:13px/20px "Arial Rounded MT Pro", arial, helvetica, sans-serif; color:#222; padding:0 0 30px 0}
+.callback-select-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.callback-select-col {float:left; width:270px; padding:0 0 0 30px}
+.callback-select-letter {font-size:20px; font-weight:bold; color:#f24380; margin:29px 0 -4px 0}
+.callback-select-row {width:100%; padding:15px 0 0 0}
+.callback-select-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.callback-select-row div {float:left; position:relative; padding:0 0 0 30px; cursor:pointer}
+.callback-select-row div span {position:absolute; left:0; top:0; width:20px; height:20px; display:block; overflow:hidden; background:url(../images/sprite.png) -265px -56px}
+.callback-select-row div span.checked {background-position:-265px -76px}
+.callback-select-row div span input {position:absolute; left:-999px; top:-999px}
