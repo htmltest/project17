@@ -27,10 +27,7 @@
 .citation-text-content sub,
 .citation-text-content sup {behavior:url(./js/PIE.htc)}
 
-.artists-list-photo,
-.artists-group-photo-color {behavior:url(./js/PIE.htc)}
-.artists-group-photo-color {display:block; top:-999px}
-.artists-group-list a:hover .artists-group-photo-color {top:0}
+.artists-list-photo {behavior:url(./js/PIE.htc)}
 
 .footer-social a span {display:none}
 .footer-social a:hover span {display:block}
@@ -63,7 +60,6 @@
 
 .artists-letters a {behavior:url(./js/PIE.htc)}
 .artists-group-title div span {behavior:url(./js/PIE.htc)}
-.artists-group-photo {behavior:url(./js/PIE.htc)}
 
 .artist-order-link a {behavior:url(./js/PIE.htc)}
 

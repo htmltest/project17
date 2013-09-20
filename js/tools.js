@@ -259,6 +259,19 @@ var sliderTimer     = null;
             return false;
         });
 
+        if ($('.artists-group-photo').length > 0) {
+            $('.artists-group-photo').BlackAndWhite({hoverEffect: false});
+            $('.artists-group-list a').hover(
+                function() {
+                    $(this).find('.BWfade').stop(true, true).fadeOut();
+                },
+
+                function() {
+                    $(this).find('.BWfade').stop(true, true).fadeIn();
+                }
+            );
+        }
+
         // заказ артиста
         $('.artist-order-link a').click(function() {
             windowOpen($('.order-artist-window').html());
